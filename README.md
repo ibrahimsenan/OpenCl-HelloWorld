@@ -16,6 +16,14 @@ Starting OpenCL on Visual Studio and It's Configuration
 2. Linking OpenCl libs with Visual Studio
 On any Visual Studio, the configurations are based on the linking with libs. Create a new Visual Studio C++ application (any template). Under src, create a new C file or Cpp it support both C/C++ . Similarly, create a kernel file by the name of kernel.cl. our main code will contain the host code. kernel.cl will contain the kernel to be executed.
 
-- OpenCL is suggested to run on 64-bit configurations.In the Configuration Manager window you need to change from 32bit to 64bit, this to make sure that everything will work perfect.
+- OpenCL is suggested to run on 64-bit configurations.In the Configuration Manager window you need to change from 32bit to 64bit, this to make sure that everything will work perfect. have a look here https://github.com/ibrahimsenan/OpenCl-HelloWorld/blob/master/Configuration%20Manager%20window.png
+
+-For OpenCL config, go to C/C++ > General page. For Additional Include Directories , point to include folder inside your SDK toolkit installation folder, see here the window (https://github.com/ibrahimsenan/OpenCl-HelloWorld/blob/master/generalC%2B%2B.png).
+-Next in property Pages, go to Linker > Input and add OpenCL.lib to Additional dependencies like the previous page (https://github.com/ibrahimsenan/OpenCl-HelloWorld/blob/master/linking.png)
+
+-Finally in Linker > General option page, add environmental variable $(SDK_LIB_PATH) for Additional Library Directories. This variable contains the path to the directory containing OpenCL.dll(It is also automatically created with SDK toolkit installation).
+(https://github.com/ibrahimsenan/OpenCl-HelloWorld/blob/master/generalLinking.png).
+
+ 3. Adding code to the project, remember that you have to add 2 files one C/Cpp file for initializing your Platform with the existing Devices and buffers, the other file is the CL Kernel. 
 
 
