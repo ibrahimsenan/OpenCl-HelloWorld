@@ -11,7 +11,7 @@ Starting OpenCL on Visual Studio and It's Configuration
 3-The NVIDIA GPU SDK check (https://developer.nvidia.com/gpu-computing-sdk), which works on NVIDIA GPUs only and supports only OpenCL 1.1.
 4- The OpenCL Studio (http://www.opencldev.com/), which is work on the latest NVIDIA drivers (285.62) and it's not function properly with the latest AMD Catalyst drivers (12.+). The most recent compatible driver is 11.9.
 
-# No matter which one you choose, you have to make sure that the OpenCL.lib is found by your linker and that the headers are in your include path.
+"No matter which one you choose, you have to make sure that the OpenCL.lib is found by your linker and that the headers are in your include path"
 
 2. Linking OpenCl libs with Visual Studio
 On any Visual Studio, the configurations are based on the linking with libs. Create a new Visual Studio C++ application (any template). Under src, create a new C file or Cpp it support both C/C++ . Similarly, create a kernel file by the name of kernel.cl. our main code will contain the host code. kernel.cl will contain the kernel to be executed.
